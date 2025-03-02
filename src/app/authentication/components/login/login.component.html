@@ -1,0 +1,70 @@
+<div class="smartflow-container">
+  <div class="login-container">
+    <!-- Logo -->
+    <div class="logo">
+      <h1>SmartFlow</h1>
+    </div>
+
+    <h2>Log in to your account</h2>
+
+    <!-- Error Message -->
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          [ngClass]="{'error-input': f['email'].touched && f['email'].invalid}"
+        >
+        <div class="error-text" *ngIf="f['email'].touched && f['email'].errors?.['required']">
+          Email is required
+        </div>
+        <div class="error-text" *ngIf="f['email'].touched && f['email'].errors?.['email']">
+          Please enter a valid email address
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          [ngClass]="{'error-input': f['password'].touched && f['password'].invalid}"
+        >
+        <div class="error-text" *ngIf="f['password'].touched && f['password'].errors?.['required']">
+          Password is required
+        </div>
+        <div class="error-text" *ngIf="f['password'].touched && f['password'].errors?.['minlength']">
+          Password must be at least 6 characters
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="loginForm.invalid || loading"
+      >
+        {{ loading ? 'Logging in...' : 'Log In' }}
+      </button>
+
+      <div class="loading-text" *ngIf="loading">
+        Verifying your credentials...
+      </div>
+    </form>
+
+    <div class="register-link">
+      Don't have an account? <a routerLink="/register">Register now</a>
+    </div>
+
+    <div class="forgot-password">
+      <a routerLink="/forgot-password">Forgot your password?</a>
+    </div>
+  </div>
+</div>

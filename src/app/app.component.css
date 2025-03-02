@@ -1,0 +1,58 @@
+:root {
+  --smartflow-primary: #1976D2;
+  --smartflow-primary-dark: #0D47A1;
+  --smartflow-primary-light: #BBDEFB;
+  --smartflow-white: #FFFFFF;
+  --smartflow-gray-light: #F5F5F5;
+  --smartflow-gray: #E0E0E0;
+  --smartflow-text: #333333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: var(--smartflow-primary);
+  color: var(--smartflow-white);
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer {
+  background-color: var(--smartflow-gray-light);
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--smartflow-text);
+  border-top: 1px solid var(--smartflow-gray);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

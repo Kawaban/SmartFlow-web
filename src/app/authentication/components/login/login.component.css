@@ -1,0 +1,51 @@
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--smartflow-white);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.error-input {
+  border-color: var(--smartflow-error) !important;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--smartflow-text);
+}
+
+.register-link a {
+  color: var(--smartflow-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.forgot-password a {
+  color: var(--smartflow-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 20px;
+  }
+}

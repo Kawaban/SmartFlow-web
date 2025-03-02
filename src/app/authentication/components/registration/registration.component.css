@@ -1,0 +1,147 @@
+:root {
+  --smartflow-primary: #1976D2;
+  --smartflow-primary-dark: #0D47A1;
+  --smartflow-primary-light: #BBDEFB;
+  --smartflow-accent: #2196F3;
+  --smartflow-text: #333333;
+  --smartflow-error: #D32F2F;
+  --smartflow-white: #FFFFFF;
+  --smartflow-gray-light: #F5F5F5;
+  --smartflow-gray: #E0E0E0;
+}
+
+.smartflow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--smartflow-primary-light);
+  padding: 20px;
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--smartflow-white);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo h1 {
+  color: var(--smartflow-primary);
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--smartflow-text);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--smartflow-text);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--smartflow-gray);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--smartflow-primary);
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.error-text {
+  color: var(--smartflow-error);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error-message {
+  background-color: #FFEBEE;
+  color: var(--smartflow-error);
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.loading-text {
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 5px;
+  color: var(--smartflow-text);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--smartflow-primary);
+  color: var(--smartflow-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: var(--smartflow-primary-dark);
+}
+
+.submit-button:disabled {
+  background-color: var(--smartflow-gray);
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--smartflow-text);
+}
+
+.login-link a {
+  color: var(--smartflow-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .registration-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
